@@ -10,11 +10,11 @@ const options = [
 ]
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [value, setValue] = useState<typeof options[0] | undefined>(options[0])
 
   return (
     <>
-    <Select options={options}/>
+    <Select options={options} value={value} onChange={o => setValue(o)}/>
     </>
   )
 }
