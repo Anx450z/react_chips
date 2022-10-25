@@ -11,36 +11,72 @@
   outline: none;
 }
 
-.container:focus{
+.container:focus {
   border-color: hsl(200, 100%, 50%);
 }
 
-.value{
+.value {
   flex-grow: 1;
 }
 
-.clear-btn{
-  background:none;
+.clear-btn {
+  background: none;
   color: #777;
   border: none;
-  outline:none;
+  outline: none;
   cursor: pointer;
   padding: 0;
-  font-size:1.25em;
+  font-size: 1.25em;
 }
 
-.clear-btn:hover, .clear-btn:focus{
-  color: red
+.clear-btn:hover,
+.clear-btn:focus {
+  color: red;
 }
 
-.divider{
+.divider {
   background-color: #777;
   align-self: stretch;
   width: 0.05em;
 }
 
-.caret{
+.caret {
   translate: 0 25%;
-  border: .25em solid transparent;
-  border-top-color: #777
+  border: 0.25em solid transparent;
+  border-top-color: #777;
+}
+
+.options {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 15em;
+  overflow-y: auto;
+  border-radius: 0.25em;
+  border: 0.05em solid #777;
+  width: 100%;
+  left: 0;
+  top: calc(100% + 0.25em);
+  background-color: white;
+  z-index: 100;
+  display: none;
+}
+
+.options.show {
+  display: block;
+}
+
+.option {
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+
+.option.highlighted {
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+}
+
+.option.selected {
+  background-color: hsl(200, 100%, 70%);
 }
