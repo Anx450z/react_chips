@@ -101,7 +101,7 @@
   border-color: hsl(0, 100%, 50%);
 }
 
-.option-badge:hover > remove-btn,
-.option-badge:focus > remove-btn{
-  color: hsl(0, 100%, 50%);
+.option-badge:hover > .remove-btn,
+.option-badge:focus > .remove-btn{
+  color: red;
 }
